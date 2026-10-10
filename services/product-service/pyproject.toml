@@ -1,0 +1,27 @@
+[project]
+name = "product-service"
+version = "0.1.0"
+description = "Product service"
+readme = "README.md"
+authors = [
+    { name = "Eyram Cobblah", email = "ecobblah2@gmail.com" }
+]
+requires-python = ">=3.13"
+
+dependencies = [
+    "grpcio>=1.84.0",
+    "grpcio-tools>=1.84.0",
+    "opentelemetry-api>=1.45.1",
+    "opentelemetry-exporter-otlp>=1.45.1",
+    "opentelemetry-instrumentation-fastapi>=0.66b1",
+    "opentelemetry-instrumentation-grpc>=0.66b1",
+    "opentelemetry-sdk>=1.45.1",
+    "fastapi[standard]>=0.142.2",
+]
+
+[project.scripts]
+product-service = "product_service.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
